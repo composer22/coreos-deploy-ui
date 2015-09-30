@@ -19,6 +19,10 @@ Two search boxes are provided:
 * Machine Query - filter the machines by a keyword. This is useful for grabbing all the machines with a keyword in the metadata, such as a list of control machines.
 * Unit Query - filter the units of a machine by keyword. This will return a list of machines and a sublist of units that contain a particular keyword. This is useful for finding machines that are runnning a service.
 
+## Additional Unit Information
+
+Hovering over the signal icon next to the name of the service will display additional information on the service status.
+
 ## License
 
 (The MIT License)
