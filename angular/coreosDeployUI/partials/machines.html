@@ -1,0 +1,58 @@
+<div>
+  <form class="ui form" name="searchForm" ng-submit="searchMachines()">
+    <div class="ui three column grid">
+      <div class="row">
+        <div class="column">
+          <div class="ui fluid icon input">
+            <input ng-model="machineQuery" name="machineQuery" type="text" placeholder="Machine Search Pattern...">
+            <i class="search icon"></i>
+          </div>
+        </div>
+        <div class="column">
+          <div class="ui fluid icon input">
+            <input ng-model="unitQuery" name="unitQuery" type="text" placeholder="Unit Search Pattern...">
+            <i class="search icon"></i>
+          </div>
+        </div>
+        <div class="column">
+          <input type="submit" class="ui primary submit button" />
+        </div>
+      </div>
+    </div>
+  </form>
+  <div class="ui two cards">
+    <div class="ui teal card" ng-repeat="machine in machines.machines">
+      <div class="content">
+        <a class="header">{{ machine.ip }}</a>
+        <div class="meta">
+          <i class="tasks icon"></i> {{ machine.machine }}
+          <div ng-repeat="metadata in machine.metadata.split(',')">
+            {{ metadata }}
+          </div>
+        </div>
+      </div>
+      <div class="description">
+        <table class="ui celled table">
+          <tbody>
+            <tr ng-repeat="unit in machine.units">
+              <td>
+                <div ng-if="unit.sub=='running'" class="ui green horizontal label">
+                  <i class="checkmark icon"></i>{{ unit.sub }}
+                </div>
+                <div ng-if="unit.sub!='running'" class="ui red horizontal label">
+                  <i class="warning sign icon"></i>{{ unit.sub }}
+                </div>
+              </td>
+              <td>
+                <div class="ui label">
+                  <i class="signal icon" title="active: {{ unit.active }} load: {{ unit.load }} hash:{{ unit.hash }}">
+                   </i>{{ unit.unit }}
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
