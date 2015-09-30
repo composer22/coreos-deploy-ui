@@ -6,7 +6,7 @@ This folder contains a simple UI to access the cluster_map API call with compose
 
 ## Configuration
 
-Modify the coreosDeployUI/js/config.js to point to your server and to use your API security token.
+Modify the angular/coreosDeployUI/js/config.js to point to your server and to use your API security token.
 
 ## Running
 
