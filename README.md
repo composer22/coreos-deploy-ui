@@ -2,7 +2,7 @@
 [![License MIT](https://img.shields.io/npm/l/express.svg)](http://opensource.org/licenses/MIT)
 [![Current Release](https://img.shields.io/badge/release-v0.0.1-brightgreen.svg)](https://github.com/composer22/coreos-deploy-ui/releases/tag/v0.0.1)
 
-This folder contains a simple UI to access the cluster_map API call with composer22/coreos-deploy
+This folder contains a simple UI to access the cluster_map API call with composer22/coreos-deploy.
 
 ## Configuration
 
